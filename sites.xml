@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Social Bookmarks
+	Copyright(c) Apostolos Dountsis
+	http://www.dountsis.com
+-->
+
+<social_sites>
+    <site>
+        <name>Del.icio.us</name>
+	<url>http://del.icio.us/post?url={link}&amp;title={title}</url>
+	<img>delicious.png</img>
+	<key>delicious</key>
+    </site>
+
+    <site>
+        <name>digg</name>
+	<url>http://digg.com/submit?phase=2&amp;url={link}&amp;title={title}</url>
+	<img>digg.png</img>
+	<key>digg</key>
+    </site>
+
+    <site>
+        <name>FURL</name>
+	<url>http://furl.net/storeIt.jsp?t={title}&amp;u={link}</url>
+	<img>furl.png</img>
+	<key>furl</key>
+    </site>
+
+    <site>
+        <name>blinklist</name>
+	<url>http://blinklist.com/index.php?Action=Blink/addblink.php&amp;Name={title}&amp;Description={title}&amp;Url={link}</url>
+	<img>blinklist.png</img>
+	<key>blinklist</key>
+    </site>
+
+    <site>
+        <name>reddit</name>
+	<url>http://reddit.com/submit?url={link}&amp;title={title}</url>
+	<img>reddit.png</img>
+	<key>reddit</key>
+    </site>
+
+    <site>
+        <name>Feed Me Links</name>
+	<url>http://feedmelinks.com/categorize?from=toolbar&amp;op=submit&amp;name={title}&amp;url={link}&amp;version=0.7</url>
+	<img>feedmelinks.png</img>
+	<key>feed_me</key>
+    </site>
+
+    <site>
+        <name>Technorati</name>
+	<url>http://www.technorati.com/faves?add={link}</url>
+	<img>technorati.png</img>
+	<key>technorati</key>
+    </site>
+
+    <site>
+        <name>Yahoo My Web</name>
+	<url>http://myweb2.search.yahoo.com/myresults/bookmarklet?u={link}&amp;t={title}</url>
+	<img>yahoo_myweb.png</img>
+	<key>yahoo</key>
+    </site>
+
+    <site>
+        <name>Newsvine</name>
+	<url>http://www.newsvine.com/_wine/save?u={link}&amp;h={title}</url>
+	<img>newsvine.png</img>
+	<key>newsvine</key>
+    </site>
+
+    <site>
+        <name>Socializer</name>
+	<url>http://ekstreme.com/socializer/?url={link}&amp;title={title}</url>
+	<img>socializer.png</img>
+	<key>socializer</key>
+    </site>
+
+    <site>
+        <name>Ma.gnolia</name>
+	<url>http://ma.gnolia.com/bookmarklet/add?url={link}&amp;title={title}&amp;description={title}</url>
+	<img>magnolia.png</img>
+	<key>magnolia</key>
+    </site>
+
+    <site>
+        <name>Stumble Upon</name>
+	<url>http://www.stumbleupon.com/refer.php?url={link}&amp;title={title}</url>
+	<img>stumbleupon.png</img>
+	<key>stumbleupon</key>
+    </site>
+    
+    <site>
+        <name>Google Bookmarks</name>
+	<url>http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk={link}&amp;title={title}</url>
+	<img>google.png</img>
+	<key>google</key>
+    </site>
+
+   <site>
+        <name>RawSugar</name>
+	<url>http://www.rawsugar.com/tagger/?turl={link}&amp;tttl={title}</url>
+	<img>rawsugar.png</img>
+	<key>rawsugar</key>
+    </site>
+
+   <site>
+        <name>Squidoo</name>
+	<url>http://www.squidoo.com/lensmaster/bookmark?{link}</url>
+	<img>squidoo.png</img>
+	<key>squidoo</key>
+    </site>
+
+   <site>
+        <name>Spurl</name>
+	<url>http://www.spurl.net/spurl.php?url={link}&amp;title={title}</url>
+	<img>spurl.png</img>
+	<key>spurl</key>
+    </site>
+
+   <site>
+        <name>BlinkBits</name>
+	<url>http://blinkbits.com/bookmarklets/save.php?v=1&amp;source_url={link}&amp;title={title}</url>
+	<img>blinkbits.png</img>
+	<key>blinkbits</key>
+    </site>
+    
+   <site>
+        <name>Netvouz</name>
+	<url>http://netvouz.com/action/submitBookmark?url={link}&amp;title={title}&amp;popup=no</url>
+	<img>netvouz.png</img>
+	<key>netvouz</key>
+    </site>
+
+   <site>
+        <name>Rojo</name>
+	<url>http://www.rojo.com/add-subscription/?resource={link}</url>
+	<img>rojo.png</img>
+	<key>rojo</key>
+    </site>
+
+   <site>
+        <name>Blogmarks</name>
+	<url>http://blogmarks.net/my/new.php?mini=1&amp;simple=1&amp;url={link}&amp;title={title}</url>
+	<img>bmarks.png</img>
+	<key>blogmarks</key>
+    </site>
+
+   <site>
+        <name>Shadows</name>
+	<url>http://www.shadows.com/shadows.aspx?url={link}</url>
+	<img>shadows.png</img>
+	<key>shadows</key>
+    </site>
+
+   <site>
+        <name>Simpy</name>
+	<url>http://www.simpy.com/simpy/LinkAdd.do?href={link}&amp;title={title}</url>
+	<img>simpy.png</img>
+	<key>simpy</key>
+    </site>
+
+   <site>
+        <name>Co.mments</name>
+	<url>http://co.mments.com/track?url={link}&amp;title={title}</url>
+	<img>comments.png</img>
+	<key>comments</key>
+    </site>
+
+   <site>
+        <name>Scuttle</name>
+	<url>http://www.scuttle.org/bookmarks.php/maxpower?action=add&amp;address={link}&amp;title={title}&amp;description={title}</url>
+	<img>scuttle.png</img>
+	<key>scuttle</key>
+    </site>
+
+   <site>
+        <name>Bloglines</name>
+	<url>http://www.bloglines.com/sub/{link}</url>
+	<img>bloglines.png</img>
+	<key>bloglines</key>
+    </site>
+
+   <site>
+        <name>Tailrank</name>
+	<url>http://tailrank.com/share/?title={title}&amp;link_href={link}</url>
+	<img>tailrank.png</img>
+	<key>tailrank</key>
+    </site>
+</social_sites>
