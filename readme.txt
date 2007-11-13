@@ -1,72 +1,48 @@
-Plugin Name: Social Bookmarks
-Version: 3.1
-Plugin URI: http://www.dountsis.com/
+=== Social Bookmarks ===
+Tags: social, bookmarks
+Requires at least: 2.0.x
+Tested up to: 2.3.1
+Stable trunk: 4.0
+Plugin URI: http://www.dountsis.com/projects/social-bookmarks
 Author: Apostolos Dountsis
 Author URI: http://www.dountsis.com
 
-The Social Bookmarks (formerly known as Social Bookmarks Bar) plugin for WordPress adds a list of XHTML 
-compliant graphic links at the end of your posts and/or pages that allow your visitors to easily 
-submit them in a number of social bookmarking sites.
+The Social Bookmarks plugin for WordPress adds a list of XHTML compliant graphic links at the end 
+of your posts and/or pages that allow your visitors to easily submit them in a number of social 
+bookmarking sites.
 Furthermore, the plugin adds a page in the WordPress admin section that lets you customize it. 
 See the Customization section below for details.
 
-The following 26 sites are supported:
+== New Features in version 4.0 ==
 
-        * Del.icio.us
-        * digg
-        * FURL
-        * blinklist
-	* Socializer
-        * reddit
-        * Feed Me Links!
-        * Technorati
-        * Newsvine
-        * Yahoo My Web
-	* Ma.gnolia
-	* Google Bookmarks
-	* Squidoo
-	* BlinkBits
-	* Stumble Upon
-	* RawSugar
-	* Spurl
-	* Netvouz
-	* Rojo
-	* Blogmarks
-	* Shadows
-	* Simpy
-	* Co.mments
-	* Scuttle
-	* Tailrank (New)
-	* Bloglines (New)
+* Added Support for WordPress versions greater than 2.1.x
+* Added AJAX interface (can be enabled, disabled from the Options Page in the Dashboard).
+* Fixed the problem where the images where not loaded if the plugin directory was named as social-bookmarks
+* Fixed the spacing issue that was caused with the use of some Themes.
+* Complete re-write of the plugin code
+* Localization support. Additional language packs can be placed on the plugin directory that add language specific social sites.
+* Loads of new sites are included in the international English pack.
 
-New Features in version 3.1
----------------------------
-Tailrank and Bloglines have been added in the supported sites. Also, you can specify whether the plugin 
-will be visible in the blog listing (index.php) and/or in the single post page.
-Finally, this version introduces a bug fix that addresses the issue that some users had with changing 
-the display title.
+== Customization ==
+
+The Options page in the WordPress admin section allows you to customize the plugin. The plugin bundles the English social sites but additional language packs can be downloaded from dountsis.com. Furthermore, a language pack template is available, in case you want to create your custom language pack. If you do, I would be more than happy to make it available on dountsis.com so that there is a common repository with all the language packs (of course you will take all the credits that you rightfully deserve!).
+
+== Installation ==
+
+1. Upload the contents of the social_bookmarks directory to wp-content/plugins/social_bookmarks directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
 
 
-Update Instructions (from versions 1.x or 2.x)
--------------------
-Download the complete package and follow the instructions in the readme file provided.
+== Frequently Asked Questions ==
 
+= Is it possible to include site XXXXX to a language pack? =
 
-Update Instructions (from version 3.0)
--------------------------
-Upload the contents of the social_bookmarks directory to your wp-content/plugins/social_bookmarks directory. 
+Sure! just mail me the link and a logo and I will include it in the next revision of the relevant language pack.
 
+= Do I have to wait for another plugin release to get an updated list of sites? =
 
-Customization
--------------
-Version 3 introduces an Options page in the WordPress admin section. You can select which sites you display, whether 
-the links will open in a new window or in the current page. Also, you can change the heading that appears above the
-links. If you have pages in your site then you can select a sub-set of them (or even all of them) where the links won't appear. You can also specify to display the links in one or two lines. You can set the plugin to be visible in the blog 
-listing (index.php) and/or in the single post page.
+The releases of the language packs are independent of the plug-in core releases.
 
-The plugin is using a stylesheet (social_bookmarks.css) which you can modify to integrate it further with your theme. 
-
-Finally, a PNG template file is included that can be used to generate additional icons.
 
 I hope that you enjoy the plugin,
 
