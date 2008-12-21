@@ -97,18 +97,17 @@ class social_view_public extends social_object
 			print("<script src=\"".$this->location_url."lib/script.aculo.us/prototype.js\" type=\"text/javascript\"></script>\n");
 			print("<script src=\"".$this->location_url."lib/script.aculo.us/scriptaculous.js\" type=\"text/javascript\"></script>\n");
 		}
-		
+
+
+/*		
 		// Include niftyCube library
 		if($this->current_settings['sbb_round_box_enabled'] == 'Y')
 		{
-		print("<link rel=\"stylesheet\" type=\"text/css\" href=\"".$this->location_url."lib/niftyCube/niftyCorners.css\" />\n");
-		print("<script type=\"text/javascript\" src=\"".$this->location_url."lib/niftyCube/niftycube.js\"></script>\n");
-		print("<script type=\"text/javascript\">\n window.onload=function()\n{Nifty(\"div#box\",\"transparent\");\n}\n</script>\n");
-		print("<link rel=\"stylesheet\" type=\"text/css\" href=\"".$this->location_url."lib/niftyCube/niftyPrint.css\" media=\"print\" />");
+            print("<link rel=\"stylesheet\" type=\"text/css\" href=\"".$this->location_url."lib/niftyCube/niftyCorners.css\" />\n");
+            print("<script type=\"text/javascript\" src=\"".$this->location_url."lib/niftyCube/niftycube.js\"></script>\n");
+            print("<script type=\"text/javascript\">\n window.onload=function()\n{Nifty(\"div#box\",\"transparent\");\n}\n</script>\n");
+            print("<link rel=\"stylesheet\" type=\"text/css\" href=\"".$this->location_url."lib/niftyCube/niftyPrint.css\" media=\"print\" />");
 		}
-
-/*
-<link rel="stylesheet" type="text/css" href="niftyPrint.css" media="print">
 */
 
 	}
@@ -275,7 +274,7 @@ $this->current_settings['sbb_round_box_enabled'] = 'N';
 
 		$html .= "<!-- Social Bookmarks END -->\n";
 		
-		if($this->current_settings['sbb_ajax_dropdown_enabled'] == 'Y' and $this->current_settings['sbb_ajax_hide_sites_initialy'] == 'Y')
+		if($this->current_settings['sbb_ajax_dropdown_enabled'] == 'Y' and $this->current_settings['sbb_ajax_dropdown_hide'] == 'Y')
 		{
 			// Hide the Sites initially (on page load)
 			$html .= "<script type=\"text/javascript\">$$('div.d$id').each( function(e) { e.visualEffect('slide_up',{duration:".$this->current_settings['sbb_ajax_dropdown_speed']."}) }); </script>";

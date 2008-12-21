@@ -3,7 +3,7 @@
 	Social Bookmarks
 	
 	English Language Pack
-	version 4.0
+	version 4.2
 	Copyright(c) Apostolos Dountsis
 	http://www.dountsis.com
 -->
@@ -105,8 +105,7 @@
     <key>facebook_en</key>
   </site>
   <site>
-    <name>Fark</name>
-    <url>http://cgi.fark.com/cgi/fark/edit.pl?new_url={link}&amp;new_comment={title}&amp;new_comment={title}&amp;linktype=Misc</url>
+    <name>Fark</name>      <url>http://cgi.fark.com/cgi/fark/edit.pl?new_url={link}&amp;new_comment={title}&amp;new_comment={title}&amp;linktype=Misc</url>
     <img>fark.png</img>
     <key>fark_en</key>
   </site>
@@ -124,7 +123,7 @@
   </site>
   <site>
     <name>FriendSite</name>
-    <url>http://FriendSite.com/users/bookmark/?u={link}&amp;t={title}</url>
+    <url>http://FriendSite.com/users/bookmarks/?u={link}&amp;t={title}</url>
     <img>friendsite.png</img>
     <key>friendsite_en</key>
   </site>

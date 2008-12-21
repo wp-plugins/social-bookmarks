@@ -1,8 +1,8 @@
 === Social Bookmarks ===
 Tags: social, bookmarks
 Requires at least: 2.0.x
-Tested up to: 2.3.1
-Stable trunk: 4.0
+Tested up to: 2.6.x
+Stable trunk: 4.0.65
 Plugin URI: http://www.dountsis.com/projects/social-bookmarks
 Author: Apostolos Dountsis
 Author URI: http://www.dountsis.com

@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: Social Bookmarks 
-Version: 4.0.64
+Plugin Name: Social Bookmarks
+Version: 4.0.65
 Plugin URI: http://www.dountsis.com/projects/social-bookmarks/
 Author: Apostolos Dountsis
 Author URI: http://www.dountsis.com
 Description: Adds a list of XHTML compliant graphic links at the end of your posts that allow your visitors to easily submit them to a number of social bookmarking sites. Use the plugin options in <a href="options-general.php?page=social_bookmarks/social_bookmarks.php">Options>Social Bookmarks</a> to configure the plugin.
 */
 
-/*  Copyright 2007  APOSTOLOS DOUNTSIS
+/*  Copyright 2008  APOSTOLOS DOUNTSIS
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
