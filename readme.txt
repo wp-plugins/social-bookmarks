@@ -1,17 +1,19 @@
 === Social Bookmarks ===
-Tags: social, bookmarks
+Contributors: apostolis
+Donate link: http://www.dountsis.com/
+Tags: social, bookmarks, links
 Requires at least: 2.0.x
-Tested up to: 2.6.x
-Stable trunk: 4.0.65
-Plugin URI: http://www.dountsis.com/projects/social-bookmarks
-Author: Apostolos Dountsis
-Author URI: http://www.dountsis.com
+Tested up to: 2.7
+Stable tag: 4.0.65
 
-The Social Bookmarks plugin for WordPress adds a list of XHTML compliant graphic links at the end 
-of your posts and/or pages that allow your visitors to easily submit them in a number of social 
-bookmarking sites.
-Furthermore, the plugin adds a page in the WordPress admin section that lets you customize it. 
-See the Customization section below for details.
+It adds a list of XHTML graphic links at the end of your posts/pages that allow your visitors to easily submit them to bookmarking social sites.
+
+== Description ==
+The Social Bookmarks plugin for WordPress adds a list of XHTML compliant graphic links at the end of your posts and/or pages that allow your visitors to easily submit them to a number of social bookmarking sites. 
+
+Furthermore, the plugin adds a page in the WordPress Dashboard that lets you customize it. You can enable/disable social bookmarking sites and exclude specific pages from the plugin.
+
+Also, you can add additional sites by uploading Site Packs to the plugin directory.
 
 == New Features in version 4.0 ==
 
@@ -25,25 +27,37 @@ See the Customization section below for details.
 
 == Customization ==
 
-The Options page in the WordPress admin section allows you to customize the plugin. The plugin bundles the English social sites but additional language packs can be downloaded from dountsis.com. Furthermore, a language pack template is available, in case you want to create your custom language pack. If you do, I would be more than happy to make it available on dountsis.com so that there is a common repository with all the language packs (of course you will take all the credits that you rightfully deserve!).
+The Options page in the WordPress Dashboard allows you to customize the plugin. 
+
+The plugin bundles the English social sites but additional Site Packs can be downloaded from [Social Bookmarks Site Packs](http://www.dountsis.com/downloads?cat=2 "Sites Packs at Dountsis.com") repository.
+
+Furthermore, a Template Site pack is available, in case you want to create your custom Site Pack. If you do, I would be more than happy to make it available on [Social Bookmarks Site Packs](http://www.dountsis.com/downloads?cat=2 "Sites Packs at Dountsis.com") repository so that there is a common place with all the Site Packs (of course you will take all the credits that you rightfully deserve!).
+
 
 == Installation ==
 
-1. Upload the contents of the social_bookmarks directory to wp-content/plugins/social_bookmarks directory.
+1. Upload the contents of the social-bookmarks directory to wp-content/plugins/social-bookmarks directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
 
 == Frequently Asked Questions ==
 
-= Is it possible to include site XXXXX to a language pack? =
+= What is a Site Pack? =
 
-Sure! just mail me the link and a logo and I will include it in the next revision of the relevant language pack.
+The Social Bookmarks includes a lot of sites (around 70!) but possibly it missess out the one that you want to have on your site. Site Packs are collection of social bookmarking sites that can be added on the Social Bookmarking plugin.
+
+= That sounds cool! Where can I download a Site Pack? =
+
+You can grab a collection of Site Packs from the [Social Bookmarks repository](http://www.dountsis.com/downloads?cat=2 "Sites Pack at Dountsis.com").
+
+= Is it possible to include site XXXXX to a Site Pack? =
+
+Sure! just mail me the link and a logo and I will include it in the next revision of the relevant Site Pack.
+
+= Can I create and distribute my own Site Pack? =
+
+Sure! Simply grab a copy of the [Template Pack](http://www.dountsis.com/downloads?cat=2 "Template Pack at Dountsis.com") and follow the simple instructions included in the pack.
 
 = Do I have to wait for another plugin release to get an updated list of sites? =
 
-The releases of the language packs are independent of the plug-in core releases.
-
-
-I hope that you enjoy the plugin,
-
-Apostolos
+The releases of the Site Packs are independent of the plug-in core releases.
