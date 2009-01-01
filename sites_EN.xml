@@ -105,7 +105,8 @@
     <key>facebook_en</key>
   </site>
   <site>
-    <name>Fark</name>      <url>http://cgi.fark.com/cgi/fark/edit.pl?new_url={link}&amp;new_comment={title}&amp;new_comment={title}&amp;linktype=Misc</url>
+    <name>Fark</name>
+    <url>http://cgi.fark.com/cgi/fark/edit.pl?new_url={link}&amp;new_comment={title}&amp;new_comment={title}&amp;linktype=Misc</url>
     <img>fark.png</img>
     <key>fark_en</key>
   </site>
@@ -224,8 +225,8 @@
     <key>simpy_en</key>
   </site>
   <site>
-    <name>Sk*rt</name>
-    <url>http://www.sk-rt.com/submit.php?url={link}</url>
+    <name>Kirtsy</name>
+    <url>http://www.kirtsy.com//submit.php?url={link}</url>
     <img>skirt.png</img>
     <key>skirt_en</key>
   </site>
