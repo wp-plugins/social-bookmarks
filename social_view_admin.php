@@ -40,12 +40,61 @@ class social_view_admin extends social_object
 	// Manage Admin Options
 	function admin_menu()
 	{
+		if($this->platform['type'] == 'WP')
+		{
+			// Top-level menu
+			add_menu_page('Social Bookmarks', 'Social', 8, __FILE__, array(&$this, 'render_admin_home'));
+			
+			// Menu Items
+
+			// Add the home submenu
+//			add_submenu_page(__FILE__, 'Social Bookmarks - Home', 'Home', 8,  'social_home', array(&$this, 'render_admin_home'));
+		
+			// Add the General options submenu
+			add_submenu_page(__FILE__, 'Social Bookmarks - General Options', 'General Options', 8,  'social_general', array(&$this, 'options_group_general'));
+
+			// Add the sites submenu
+			add_submenu_page(__FILE__, 'Social Bookmarks - Bookmarks', 'Bookmarks', 8,  'social_sites', array(&$this, 'options_group_sites'));
+
+			// Add the debug submenu
+			add_submenu_page(__FILE__, 'Social Bookmarks - Debug', 'Debug', 8,  'social_debug', array(&$this, 'debug_section'));
+
+			// Add the debug submenu
+			add_submenu_page(__FILE__, 'Social Bookmarks - About', 'About', 8,  'social_about', array(&$this, 'render_admin_about'));
+
+
+		}    	
+/*
 		// Add admin page to the Options Tab of the admin section
 		if($this->platform['type'] == 'WP' and function_exists(add_options_page))
 		{
 			add_options_page('Social Bookmarks Options', 'Social Bookmarks', 8, __FILE__, array(&$this, 'plugin_options'));
 		}
+*/
 	}	
+
+	// Render the home page for the admin section
+	function render_admin_home()
+	{
+		$html = '<div class="wrap">';
+		$html .= '<h2>Social Bookmarks</h2>';
+		$html .= '<p>Welcome to the social bookmarks.</p>';
+		$html .= 'Intro Blurb. RSS Feed from Dountsis.com, Site Packs';
+		$html .= '</div>';
+		
+		print($html);		
+	}
+
+	// Render the home page for the admin section
+	function render_admin_about()
+	{
+		$html = '<div class="wrap">';
+		$html .= '<h2>Social Bookmarks - About</h2>';
+		$html .= file_get_contents($this->location_url.'social_about.html');
+		$html .= '</div>';
+		
+		print($html);		
+	}
 
 	// Admin page
 	function plugin_options()
@@ -54,13 +103,13 @@ class social_view_admin extends social_object
 		$html .= '<h2>Social Bookmarks</h2>';
 		
   		// General Plugin Options
-  		$html .= $this->options_group_general();
+  		$this->options_group_general();
 		
   		// Sites Option
- 		$html .= $this->options_group_sites();
+ 		$this->options_group_sites();
   		
   		// Debug Screen
-// 		$html .= $this->debug_section();
+// 		$this->debug_section();
 		
 		$html .= '</div>';
 		
@@ -73,7 +122,8 @@ class social_view_admin extends social_object
 		$html = '<div class="wrap">';
 		
 		$html .= '<fieldset class="options">';
-		$html .= '<legend>General Options</legend>';
+		$html .= '<h2>Social Bookmarks - General Options</h2>';
+//		$html .= '<legend>General Options</legend>';
 
    		$html .= '<form style="padding-left:25px;" method="post">';
 
@@ -111,7 +161,8 @@ class social_view_admin extends social_object
 		$html .= '</fieldset>';
 		$html .= '</div>';
 		
-		return $html;
+		print($html);
+	//	return $html;
 	}
 
 	function options_group_sites()
@@ -122,7 +173,8 @@ class social_view_admin extends social_object
 		$html = '<div class="wrap">';
 		
 		$html .= '<fieldset class="options">';
-		$html .= '<legend>Social Bookmarking Sites</legend>';
+		$html .= '<h2>Social Bookmarks - Sites</h2>';		
+//		$html .= '<legend>Social Bookmarking Sites</legend>';
 
 		$html .= '<p>Select the social bookmarking sites that you want to display on your site:</p>';
 		$html .= '<form id="sites" style="padding-left:25px;" method="post">';
@@ -175,7 +227,9 @@ class social_view_admin extends social_object
 		$html .= '</form>';
 		$html .= '</div>';
 		$html .= '</fieldset>';
-		return $html;
+		
+		print($html);
+//		return $html;
 	}
 
 	function debug_section()
@@ -208,7 +262,9 @@ class social_view_admin extends social_object
     	print('<pre>');    	
  */
     	$html .= '</div>';
-		return $html;
+    	
+    	print($html);
+		// return $html;
 	}
 	
 	/**

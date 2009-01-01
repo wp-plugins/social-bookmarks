@@ -306,11 +306,11 @@ $this->current_settings['sbb_round_box_enabled'] = 'N';
 
 		if($this->current_settings['sbb_target'] != 'new')
 		{
-			$target_url = "<a href=\"$target_href\" title=\"$target_desc\">$target_img</a>\n";
+			$target_url = "<a href=\"$target_href\" rel=\"nofollow\" title=\"$target_desc\">$target_img</a>\n";
 		}
 		else
 		{
-			$target_url = "<a onclick=\"window.open(this.href, '_blank', 'scrollbars=yes,menubar=no,height=600,width=750,resizable=yes,toolbar=no,location=no,status=no'); return false;\" href=\"$target_href\" title=\"$target_desc\">$target_img</a>\n";
+			$target_url = "<a onclick=\"window.open(this.href, '_blank', 'scrollbars=yes,menubar=no,height=600,width=750,resizable=yes,toolbar=no,location=no,status=no'); return false;\" href=\"$target_href\" rel=\"nofollow\" title=\"$target_desc\">$target_img</a>\n";
 		}
 		
 		// Return result
