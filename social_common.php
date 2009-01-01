@@ -150,7 +150,8 @@
 		
  		if($host['type'] == 'WP')
  		{
-			$app_directory = end(explode('/', dirname(__FILE__)));
+//			$app_directory = end(explode('/', dirname(__FILE__)));
+			$app_directory = end(explode(DIRECTORY_SEPARATOR, dirname(__FILE__)));
 			$current_dir = social_db::get_user_option('siteurl').'/wp-content/plugins/'.$app_directory.'/';
  		}
 
