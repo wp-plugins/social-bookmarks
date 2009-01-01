@@ -94,11 +94,12 @@ class social_view_public extends social_object
 		// Include script.aculo.us library
 		if($this->current_settings['sbb_ajax_dropdown_enabled'] == 'Y')
 		{
-			print("<script src=\"".$this->location_url."lib/script.aculo.us/prototype.js\" type=\"text/javascript\"></script>\n");
-			print("<script src=\"".$this->location_url."lib/script.aculo.us/scriptaculous.js\" type=\"text/javascript\"></script>\n");
+		//	$scriptaculous_url = $this->location_url."lib/script.aculo.us/";
+			$scriptaculous_url = social_db::get_user_option('siteurl') . '/wp-includes/js/scriptaculous/';
+			
+			print("<script src=\"".$scriptaculous_url."prototype.js\" type=\"text/javascript\"></script>\n");
+			print("<script src=\"".$scriptaculous_url."scriptaculous.js\" type=\"text/javascript\"></script>\n");
 		}
-
-
 /*		
 		// Include niftyCube library
 		if($this->current_settings['sbb_round_box_enabled'] == 'Y')
