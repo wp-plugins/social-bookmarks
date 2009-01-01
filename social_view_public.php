@@ -244,16 +244,12 @@ $this->current_settings['sbb_round_box_enabled'] = 'N';
 			if(in_array($site, $user_sites))
 			{
 				$html .= $this->get_social_bookmark($site, $settings, 0);
-				
-				if($i == $sites_per_line)
+
+				if($i%$sites_per_line == 0)
+//				if($i == $sites_per_line)
 				{
 					$html .= "<br />\n";
 				}
-/*				else
-				{
-					$html .= "&nbsp;";
-				}
-*/
 				$i++;
 			}
 		}
