@@ -29,7 +29,7 @@ Also, you can add additional sites by uploading Site Packs to the plugin directo
 * Updated the url for sk*rt as now it is called kirtsy.
 * The admin section is now located on a top-level menu in Dashboard.
 * The options are now divided into separate pages to avoid the vertical scrolling.
-* The link to all the social sites now include a nofollow attribute.
+* The link to all the social sites now includes a nofollow attribute.
 
 
 == Changelog for 4.0 ==
@@ -61,7 +61,7 @@ It is highly recommended to use the automatic installation/updating feature of W
 
 == Frequently Asked Questions ==
 
-= My favourite site is not included in Social Bookmarks.=
+= My favourite site is not included in Social Bookmarks. =
 You can [Contact Form](http://www.dountsis.com/about#contact "contact me") with the name of the site and its URL and I will include it in a future release.
 
 = What is a Site Pack? =
