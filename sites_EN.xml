@@ -106,7 +106,7 @@
   </site>
   <site>
     <name>Fark</name>
-    <url>http://cgi.fark.com/cgi/fark/edit.pl?new_url={link}&amp;new_comment={title}&amp;new_comment={title}&amp;linktype=Misc</url>
+    <url>http://cgi.fark.com/cgi/fark/farkit.pl?u={link}&amp;h={title}</url>
     <img>fark.png</img>
     <key>fark_en</key>
   </site>
