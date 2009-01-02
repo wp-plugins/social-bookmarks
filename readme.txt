@@ -4,19 +4,20 @@ Donate link: http://www.dountsis.com/
 Tags: social, bookmarks, links
 Requires at least: 2.5.1
 Tested up to: 2.7
-Stable tag: 4.0.65
+Stable tag: 4.1
 
 It adds a list of XHTML graphic links at the end of your posts/pages that allow your visitors to easily submit them to bookmarking social sites.
 
 == Description ==
 The Social Bookmarks plugin for WordPress adds a list of XHTML compliant graphic links at the end of your posts and/or pages that allow your visitors to easily submit them to a number of social bookmarking sites. 
 
-Furthermore, the plugin adds a page in the WordPress Dashboard that lets you customize it. You can enable/disable social bookmarking sites and exclude specific pages from the plugin.
+Furthermore, the plugin adds a section in the WordPress Dashboard that lets you customize it. You can enable/disable social bookmarking sites and exclude specific pages from the plugin.
 
 Also, you can add additional sites by uploading Site Packs to the plugin directory.
 
 
 == Changelog for 4.1 ==
+
 * Updated the link for Fark
 * Blue Dot is now called Faves
 * Added Buzz by Yahoo!
@@ -40,6 +41,7 @@ Also, you can add additional sites by uploading Site Packs to the plugin directo
 * Complete re-write of the plugin code
 * Localization support. Additional language packs can be placed on the plugin directory that add language specific social sites.
 * Loads of new sites are included in the international English pack.
+
 
 == Customization ==
 
