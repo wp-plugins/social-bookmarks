@@ -5,7 +5,7 @@ Plugin URI: http://www.dountsis.com/projects/social-bookmarks/
 Description: Adds a list of XHTML compliant graphic links at the end of your posts that allow your visitors to easily submit them to a number of social bookmarking sites. Use the plugin options under <a href="admin.php?page=social-bookmarks/social_view_admin.php">Dashboard > Social</a> to configure it.
 Author: Apostolos Dountsis
 Author URI: http://www.dountsis.com
-Version: 4.0.65
+Version: 4.1
 */
 
 /*  Copyright 2008  APOSTOLOS DOUNTSIS
