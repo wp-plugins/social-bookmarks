@@ -32,6 +32,9 @@ class social_view_admin extends social_object
 	{
 		if($this->platform['type'] == 'WP' and function_exists(add_action))
 		{
+			// Adds the CSS to the header
+			add_action('admin_head', array(&$this, 'include_header'));
+			
 			// Add Admin Menu
 			add_action('admin_menu', array(&$this, 'admin_menu'));
 		}
@@ -42,6 +45,7 @@ class social_view_admin extends social_object
 	{
 		if($this->platform['type'] == 'WP')
 		{
+	
 			// Top-level menu
 			add_menu_page('Social Bookmarks', 'Social', 8, __FILE__, array(&$this, 'render_admin_home'));
 			
@@ -51,18 +55,20 @@ class social_view_admin extends social_object
 //			add_submenu_page(__FILE__, 'Social Bookmarks - Home', 'Home', 8,  'social_home', array(&$this, 'render_admin_home'));
 		
 			// Add the General options submenu
-			add_submenu_page(__FILE__, 'Social Bookmarks - General Options', 'General Options', 8,  'social_general', array(&$this, 'options_group_general'));
+			add_submenu_page(__FILE__, 'Social Bookmarks - Options', 'Options', 8,  'social_general', array(&$this, 'options_group_general'));
 
 			// Add the sites submenu
 			add_submenu_page(__FILE__, 'Social Bookmarks - Bookmarks', 'Bookmarks', 8,  'social_sites', array(&$this, 'options_group_sites'));
 
 			// Add the debug submenu
-			add_submenu_page(__FILE__, 'Social Bookmarks - Debug', 'Debug', 8,  'social_debug', array(&$this, 'debug_section'));
+			add_submenu_page(__FILE__, 'Social Bookmarks - Info', 'Info', 8,  'social_debug', array(&$this, 'debug_section'));
 
 			// Add the debug submenu
 			add_submenu_page(__FILE__, 'Social Bookmarks - About', 'About', 8,  'social_about', array(&$this, 'render_admin_about'));
 
-
+			wp_enqueue_script('jquery-ui-draggable');
+			wp_enqueue_script('postbox');
+			wp_enqueue_script('dashboard');
 		}    	
 /*
 		// Add admin page to the Options Tab of the admin section
@@ -73,27 +79,106 @@ class social_view_admin extends social_object
 */
 	}	
 
+	function include_header()
+	{
+		wp_admin_css('css/dashboard');
+	}
+	
 	// Render the home page for the admin section
 	function render_admin_home()
 	{
-		$html = '<div class="wrap">';
-		$html .= '<h2>Social Bookmarks</h2>';
-		$html .= '<p>Welcome to the social bookmarks.</p>';
-		$html .= 'Intro Blurb. RSS Feed from Dountsis.com, Site Packs';
-		$html .= '</div>';
-		
-		print($html);		
+		$my_domain = 'social-bookmarks';
+
+		if (is_admin ()) 
+		{
+			if( function_exists( 'add_meta_box' )) 
+			{
+				add_meta_box( 'social-bookmarks_welcome', __( 'Welcome to Social Bookmarks', $my_domain ), array(&$this,'welcome_contents'), $my_domain);
+				add_meta_box( 'social-bookmarks_packs', __( 'Site Packs', $my_domain ), array(&$this,'site_packs_contents'), $my_domain);
+				add_meta_box( 'social-bookmarks_rss', __( 'Latest News', $my_domain ), array(&$this,'rss_contents'), $my_domain);
+			}
+		}		
+
+		wp_nonce_field( 'closedpostboxes', 'closedpostboxesnonce', false );
+		wp_nonce_field( 'meta-box-order', 'meta-box-order-nonce', false );
+
+		print('<div class="wrap">');
+		print('<h2>Social Bookmarks</h2>');
+		print('<div id="dashboard-widgets-wrap">');
+		print('<div id=\'dashboard-widgets\' class=\'metabox-holder\'>');
+		do_meta_boxes($my_domain,'advanced', null);
+		print('</div></div></div>');		
 	}
 
+	function welcome_contents()
+	{
+		print("<p>In this section you configure the Social Bookmarks plugin. 
+		Under the <em><a href=\"admin.php?page=social_general\">Options</a></em> section, you will find all the plugin options that you customize to match your site needs.
+		In the <em><a href=\"admin.php?page=social_sites\">Bookmarks</a></em> section, you can enable and disable the sites that will appear on your posts/pages.</p>");
+		
+		print("<p><ul>");
+		print("<li><a href=\"http://www.dountsis.com/projects/social-bookmarks\">Plugin Site</a> - The home of the plugin.<li>");
+		print("<li><a href=\"http://bugtracker.dountsis.com/\">Support Site</a> - If you have spotted a problem with the plugin or have an idea for a new feature, then please submit it in this site and do not forget to include your WordPress version, server operating system and description of your issue.<li>");
+		print("</ul></p>");
+	}
+	
+	function site_packs_contents()
+	{
+		print("<p>Site Packs are collection of social bookmarking sites that can be added on the Social Bookmarking plugin.");
+		print(" You can download any Site Packs from the <a href=\"http://www.dountsis.com/downloads?cat=2\" title=\"Sites Pack at Dountsis.com\">Social Bookmarks repository</a>.</p>");
+		print("<p>Finally, you can create your own Site Packs if you want to. Simply download the <a href=\"http://www.dountsis.com/downloads?cat=2\" title=\"Template Pack at Dountsis.com\">Template Pack</a> and follow the simple instructions included in the pack.</p>");
+	}
+
+	function rss_contents()
+	{
+		// get feed_messages
+		require_once(ABSPATH . WPINC . '/rss.php');
+		$rss = @fetch_rss('http://www.dountsis.com/feed');
+		
+		if ( isset($rss->items) && 0 != count($rss->items) )
+		{
+			$rss->items = array_slice($rss->items, 0, 3);
+			echo "<ul>";
+			foreach ($rss->items as $item)
+			{
+			 	print('<li><a class="rsswidget" title="" href="'. wp_filter_kses($item['link']) .'">'. wp_specialchars($item['title']) .'</a>');
+		  		print('<span class="rss-date">&nbsp;'. date("F jS, Y", strtotime($item['pubdate'])).'</span>'); 
+				print('<div class="rssSummary"><strong>'. human_time_diff(strtotime($item['pubdate'], time())) .' ago</strong> - '. $item['description'] .'</div></li>');
+			}
+			print("</ul>");
+		}
+//		print("This is the contents of the box.");
+	}
+	
 	// Render the home page for the admin section
 	function render_admin_about()
 	{
-		$html = '<div class="wrap">';
-		$html .= '<h2>Social Bookmarks - About</h2>';
+		$my_domain = 'social-bookmarks';
+
+		if (is_admin ()) 
+		{
+			if( function_exists( 'add_meta_box' )) 
+			{
+				add_meta_box( 'social-bookmarks_about', __( 'About this plugin', $my_domain ), array(&$this,'about_contents'), $my_domain);
+			}
+		}		
+
+		wp_nonce_field( 'closedpostboxes', 'closedpostboxesnonce', false );
+		wp_nonce_field( 'meta-box-order', 'meta-box-order-nonce', false );
+
+		print('<div class="wrap">');
+		print('<h2>Social Bookmarks - About</h2>');
+		print('<div id="dashboard-widgets-wrap">');
+		print('<div id=\'dashboard-widgets\' class=\'metabox-holder\'>');
+		do_meta_boxes($my_domain,'advanced', null);
+		print('</div></div></div>');
+	}
+	
+	function about_contents()
+	{
 		$html .= file_get_contents($this->location_url.'social_about.html');
-		$html .= '</div>';
 		
-		print($html);		
+		print($html);	
 	}
 
 	// Admin page
@@ -118,14 +203,30 @@ class social_view_admin extends social_object
 
 	function options_group_general()
 	{
-  		// Other Options
-		$html = '<div class="wrap">';
-		
-		$html .= '<fieldset class="options">';
-		$html .= '<h2>Social Bookmarks - General Options</h2>';
-//		$html .= '<legend>General Options</legend>';
+		$my_domain = 'social-bookmarks';
 
-   		$html .= '<form style="padding-left:25px;" method="post">';
+		if (is_admin ()) 
+		{
+			if( function_exists( 'add_meta_box' )) 
+			{
+				add_meta_box( 'social-bookmarks_options', __( 'Options', $my_domain ), array(&$this,'options_contents'), $my_domain);
+			}
+		}		
+
+		wp_nonce_field( 'closedpostboxes', 'closedpostboxesnonce', false );
+		wp_nonce_field( 'meta-box-order', 'meta-box-order-nonce', false );
+
+		print('<div class="wrap">');
+		print('<h2>Social Bookmarks - Options</h2>');
+		print('<div id="dashboard-widgets-wrap">');
+		print('<div id=\'dashboard-widgets\' class=\'metabox-holder\'>');
+		do_meta_boxes($my_domain,'advanced', null);
+		print('</div></div></div>');		
+	}
+
+	function options_contents()
+	{
+   		$html = '<form style="padding-left:25px;" method="post">';
 
 		$html .= $this->option_open_links_target('sbb_target');
 	
@@ -156,29 +257,43 @@ class social_view_admin extends social_object
 		// Save General options	
 		// Hidden var to assist identfying the form POST
 		$html .= '<input type="hidden" name="sbb_general" value="sites" />';
-		$html .= '<p class="submit"><input type="submit" value="Update Options &raquo;"></p>';
+		$html .= '<p class="submit"><input type="submit" class="button-primary" value="Update Options &raquo;"></p>';
 		$html .= '</form>';
 		$html .= '</fieldset>';
 		$html .= '</div>';
 		
-		print($html);
-	//	return $html;
+		print($html);	
 	}
-
+	
 	function options_group_sites()
 	{
+		$my_domain = 'social-bookmarks';
+
+		if (is_admin ()) 
+		{
+			if( function_exists( 'add_meta_box' )) 
+			{
+				add_meta_box( 'social-bookmarks_sites', __( 'Sites', $my_domain ), array(&$this,'sites_contents'), $my_domain);
+			}
+		}		
+
+		wp_nonce_field( 'closedpostboxes', 'closedpostboxesnonce', false );
+		wp_nonce_field( 'meta-box-order', 'meta-box-order-nonce', false );
+
+		print('<div class="wrap">');
+		print('<h2>Social Bookmarks - Sites</h2>');
+		print('<div id="dashboard-widgets-wrap">');
+		print('<div id=\'dashboard-widgets\' class=\'metabox-holder\'>');
+		do_meta_boxes($my_domain,'advanced', null);
+		print('</div></div></div>');
+	}
+	
+	function sites_contents()
+	{
+		$html = '<p>Select the social bookmarking sites that you want to display on your site:</p>';
+		$html .= '<form id="sites" style="padding-left:25px;" method="post">';	
+	
 		$user_option = explode('|', $this->current_settings['sbb_sites']);
-
-		// Enable/Disable Sites
-		$html = '<div class="wrap">';
-		
-		$html .= '<fieldset class="options">';
-		$html .= '<h2>Social Bookmarks - Sites</h2>';		
-//		$html .= '<legend>Social Bookmarking Sites</legend>';
-
-		$html .= '<p>Select the social bookmarking sites that you want to display on your site:</p>';
-		$html .= '<form id="sites" style="padding-left:25px;" method="post">';
-
 		$i = 0;
 		$html_left = $html_right = '';
 		foreach($this->social_places as $site => $settings)
@@ -223,27 +338,46 @@ class social_view_admin extends social_object
 		// Hidden var to assist identfying the form POST
 		$html .= '<p>&nbsp;</p>';
 		$html .= '<input type="hidden" name="sbb_sites" value="sbb_sites" />';
-		$html .= '<p class="submit"><input type="submit" value="Update Options  &raquo;"></p>';
+		$html .= '<p class="submit"><input type="submit" class="button-primary" value="Update Options  &raquo;"></p>';
 		$html .= '</form>';
 		$html .= '</div>';
 		$html .= '</fieldset>';
 		
 		print($html);
-//		return $html;
 	}
 
 	function debug_section()
 	{
-		$html = '<div class="wrap">';
-    	$html .= '<h2>Debug</h2>';
+		$my_domain = 'social-bookmarks';
 
-    	$html .= '<p>Current Settings</p>';
+		if (is_admin ()) 
+		{
+			if( function_exists( 'add_meta_box' )) 
+			{
+				add_meta_box( 'social-bookmarks_debug', __( 'Info', $my_domain ), array(&$this,'debug_contents'), $my_domain);
+			}
+		}		
+
+		wp_nonce_field( 'closedpostboxes', 'closedpostboxesnonce', false );
+		wp_nonce_field( 'meta-box-order', 'meta-box-order-nonce', false );
+
+		print('<div class="wrap">');
+		print('<h2>Social Bookmarks - Info</h2>');
+		print('<div id="dashboard-widgets-wrap">');
+		print('<div id=\'dashboard-widgets\' class=\'metabox-holder\'>');
+		do_meta_boxes($my_domain,'advanced', null);
+		print('</div></div></div>');
+	}
+	
+	function debug_contents()
+	{	
+    	$html .= '<h4>Database Settings</h4>';
 		foreach($this->current_settings as $key => $value)
 		{
 			$html .= "<strong>$key:</strong> $value <br />";
 		}
     	
-		$html .= "<p>Locations</p>";
+		$html .= "<br/><h4>Locations</h4>";
 		$html .= 'Directory: '.dirname(__FILE__);
 		$html .= '<br /> URL: '. $this->location_url;
 /*		
@@ -264,7 +398,6 @@ class social_view_admin extends social_object
     	$html .= '</div>';
     	
     	print($html);
-		// return $html;
 	}
 	
 	/**
