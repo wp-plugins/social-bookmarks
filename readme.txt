@@ -17,7 +17,10 @@ Also, you can add additional sites by uploading Site Packs to the plugin directo
 
 
 == Changelog for 4.1 ==
-
+* Updated the link for Fark
+* Blue Dot is now called Faves
+* Added Buzz by Yahoo!
+* Added a Fequently-Asked-Question in the About page.
 * Optimized interface for WordPress 2.7
 * The plugin now uses the Scriptaculous library supplied by WordPress.
 * Fixed the Cannot redeclare class social_bookmarks issue.
@@ -56,6 +59,9 @@ It is highly recommended to use the automatic installation/updating feature of W
 
 == Frequently Asked Questions ==
 
+= My favourite site is not included in Social Bookmarks.=
+You can [Contact Form](http://www.dountsis.com/about#contact "contact me") with the name of the site and its URL and I will include it in a future release.
+
 = What is a Site Pack? =
 
 The Social Bookmarks includes a lot of sites (around 70!) but possibly it missess out the one that you want to have on your site. Site Packs are collection of social bookmarking sites that can be added on the Social Bookmarking plugin.
@@ -64,7 +70,7 @@ The Social Bookmarks includes a lot of sites (around 70!) but possibly it misses
 
 You can grab a collection of Site Packs from the [Social Bookmarks repository](http://www.dountsis.com/downloads?cat=2 "Sites Pack at Dountsis.com").
 
-= Is it possible to include site XXXXX to a Site Pack? =
+= Is it possible to include a site to a Site Pack? =
 
 Sure! just mail me the link and a logo and I will include it in the next revision of the relevant Site Pack.
 
@@ -75,3 +81,9 @@ Sure! Simply grab a copy of the [Template Pack](http://www.dountsis.com/download
 = Do I have to wait for another plugin release to get an updated list of sites? =
 
 The releases of the Site Packs are independent of the plug-in core releases.
+
+=  I think that I have a problem with the plugin. =	You can report your issues to me using the [Bugtracker](http://bugtracker.dountsis.com/ "Bugtracker"). Before you do so, please check whether someone else has reported the same issue. If not then, go ahead and add it making sure that you include as much technical information as possible and an accurate description of your issue.
+
+= Social Bookmarks is missing a feature that I really want! =
+
+Well, in this case, submit your feature request on [Bugtracker](http://bugtracker.dountsis.com/ "Bugtracker") and I will include it in a future release.
