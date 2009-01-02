@@ -39,17 +39,17 @@
     <key>blogmemes_en</key>
   </site>
   <site>
-    <name>Faves</name>
-    <url>http://faves.com/Authoring.aspx?u={link}&amp;t={title}</url>
-    <img>bluedot.png</img>
-    <key>bluedot_en</key>
-  </site>
-  <site>
     <name>BUMPzee</name>
     <url>http://www.bumpzee.com/bump.php?u={link}</url>
     <img>bumpzee.png</img>
     <key>bumpzee_en</key>
   </site>
+  <site>
+    <name>Buzz</name>
+    <url>http://buzz.yahoo.com/submit?submitUrl={link}&amp;submitHeadline={title}&amp;submitSummary=</url>
+    <img>buzz.png</img>
+    <key>buzz_en</key>
+  </site>   
   <site>
     <name>Co.mments</name>
     <url>http://co.mments.com/track?url={link}&amp;title={title}</url>
@@ -109,6 +109,12 @@
     <url>http://cgi.fark.com/cgi/fark/farkit.pl?u={link}&amp;h={title}</url>
     <img>fark.png</img>
     <key>fark_en</key>
+  </site>
+  <site>
+    <name>Faves</name>
+    <url>http://faves.com/Authoring.aspx?u={link}&amp;t={title}</url>
+    <img>bluedot.png</img>
+    <key>bluedot_en</key>
   </site>
   <site>
     <name>Feed Me Links</name>
