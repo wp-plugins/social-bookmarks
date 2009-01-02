@@ -2,7 +2,7 @@
 Contributors: apostolis
 Donate link: http://www.dountsis.com/
 Tags: social, bookmarks, links
-Requires at least: 2.0.x
+Requires at least: 2.5.1
 Tested up to: 2.7
 Stable tag: 4.0.65
 
@@ -15,7 +15,20 @@ Furthermore, the plugin adds a page in the WordPress Dashboard that lets you cus
 
 Also, you can add additional sites by uploading Site Packs to the plugin directory.
 
-== New Features in version 4.0 ==
+
+== Changelog for 4.1 ==
+
+* Optimized interface for WordPress 2.7
+* The plugin now uses the Scriptaculous library supplied by WordPress.
+* Fixed the Cannot redeclare class social_bookmarks issue.
+* Fixed the issue where the images were not appearing on a number of windows PHP servers.
+* Updated the url for sk*rt as now it is called kirtsy.
+* The admin section is now located on a top-level menu in Dashboard.
+* The options are now divided into separate pages to avoid the vertical scrolling.
+* The link to all the social sites now include a nofollow attribute.
+
+
+== Changelog for 4.0 ==
 
 * Added Support for WordPress versions greater than 2.1.x
 * Added AJAX interface (can be enabled, disabled from the Options Page in the Dashboard).
@@ -36,6 +49,7 @@ Furthermore, a Template Site pack is available, in case you want to create your 
 
 == Installation ==
 
+It is highly recommended to use the automatic installation/updating feature of WordPress. For a manual installation, please follow the instructions below:
 1. Upload the contents of the social-bookmarks directory to wp-content/plugins/social-bookmarks directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
