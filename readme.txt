@@ -62,7 +62,7 @@ It is highly recommended to use the automatic installation/updating feature of W
 == Frequently Asked Questions ==
 
 = My favourite site is not included in Social Bookmarks. =
-You can [Contact Form](http://www.dountsis.com/about#contact "contact me") with the name of the site and its URL and I will include it in a future release.
+You can [contact me](http://www.dountsis.com/about#contact "Contact Form") with the name of the site and its URL and I will include it in a future release.
 
 = What is a Site Pack? =
 
