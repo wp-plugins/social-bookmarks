@@ -39,8 +39,8 @@
     <key>blogmemes_en</key>
   </site>
   <site>
-    <name>Blue Dot</name>
-    <url>http://bluedot.us/Authoring.aspx?u={link}&amp;t={title}</url>
+    <name>Faves</name>
+    <url>http://faves.com/Authoring.aspx?u={link}&amp;t={title}</url>
     <img>bluedot.png</img>
     <key>bluedot_en</key>
   </site>
