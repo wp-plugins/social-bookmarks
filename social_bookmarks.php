@@ -2,7 +2,7 @@
 /*
 Plugin Name: Social Bookmarks
 Plugin URI: http://www.dountsis.com/projects/social-bookmarks/
-Description: Adds a list of XHTML compliant graphic links at the end of your posts that allow your visitors to easily submit them to a number of social bookmarking sites. Use the plugin options in <a href="options-general.php?page=social_bookmarks/social_bookmarks.php">Options>Social Bookmarks</a> to configure the plugin.
+Description: Adds a list of XHTML compliant graphic links at the end of your posts that allow your visitors to easily submit them to a number of social bookmarking sites. Use the plugin options under <a href="admin.php?page=social-bookmarks/social_view_admin.php">Dashboard > Social</a> to configure it.
 Author: Apostolos Dountsis
 Author URI: http://www.dountsis.com
 Version: 4.0.65

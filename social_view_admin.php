@@ -61,7 +61,7 @@ class social_view_admin extends social_object
 			add_submenu_page(__FILE__, 'Social Bookmarks - Bookmarks', 'Bookmarks', 8,  'social_sites', array(&$this, 'options_group_sites'));
 
 			// Add the debug submenu
-			add_submenu_page(__FILE__, 'Social Bookmarks - Info', 'Info', 8,  'social_debug', array(&$this, 'debug_section'));
+//			add_submenu_page(__FILE__, 'Social Bookmarks - Info', 'Info', 8,  'social_debug', array(&$this, 'debug_section'));
 
 			// Add the debug submenu
 			add_submenu_page(__FILE__, 'Social Bookmarks - About', 'About', 8,  'social_about', array(&$this, 'render_admin_about'));
@@ -112,33 +112,32 @@ class social_view_admin extends social_object
 
 	function welcome_contents()
 	{
-		print("<p>In this section you configure the Social Bookmarks plugin. 
+		print("<p>In this section you configure the <em>Social Bookmarks</em> plugin. 
 		Under the <em><a href=\"admin.php?page=social_general\">Options</a></em> section, you will find all the plugin options that you customize to match your site needs.
 		In the <em><a href=\"admin.php?page=social_sites\">Bookmarks</a></em> section, you can enable and disable the sites that will appear on your posts/pages.</p>");
 		
 		print("<p><ul>");
 		print("<li><a href=\"http://www.dountsis.com/projects/social-bookmarks\">Plugin Site</a> - The home of the plugin.<li>");
-		print("<li><a href=\"http://bugtracker.dountsis.com/\">Support Site</a> - If you have spotted a problem with the plugin or have an idea for a new feature, then please submit it in this site and do not forget to include your WordPress version, server operating system and description of your issue.<li>");
+		print("<li><a href=\"http://bugtracker.dountsis.com/\">Bugtracker</a> - If you have spotted a problem with the plugin or have an idea for a new feature, then please submit it in this site and do not forget to include your WordPress version, server operating system and description of your issue.<li>");
 		print("</ul></p>");
 	}
 	
 	function site_packs_contents()
 	{
-		print("<p>Site Packs are collection of social bookmarking sites that can be added on the Social Bookmarking plugin.");
-		print(" You can download any Site Packs from the <a href=\"http://www.dountsis.com/downloads?cat=2\" title=\"Sites Pack at Dountsis.com\">Social Bookmarks repository</a>.</p>");
-		print("<p>Finally, you can create your own Site Packs if you want to. Simply download the <a href=\"http://www.dountsis.com/downloads?cat=2\" title=\"Template Pack at Dountsis.com\">Template Pack</a> and follow the simple instructions included in the pack.</p>");
+		print("<p><em>Site Packs</em> are collection of social bookmarking sites that can be added to the <em>Social Bookmarks</em> plugin.");
+		print(" You can download <em>Site Packs</em> from the <a href=\"http://www.dountsis.com/downloads?cat=2\" title=\"Sites Pack at Dountsis.com\">Social Bookmarks repository</a>.</p>");
+		print("<p>Finally, you can create your own <em>Site Packs</em> if you want to. Simply download the <a href=\"http://www.dountsis.com/downloads?cat=2\" title=\"Template Pack at Dountsis.com\">Template Pack</a> and follow the simple instructions provided in the pack.</p>");
 	}
 
 	function rss_contents()
 	{
-		// get feed_messages
 		require_once(ABSPATH . WPINC . '/rss.php');
 		$rss = @fetch_rss('http://www.dountsis.com/feed');
 		
 		if ( isset($rss->items) && 0 != count($rss->items) )
 		{
-			$rss->items = array_slice($rss->items, 0, 3);
-			echo "<ul>";
+			$rss->items = array_slice($rss->items, 0, 4);
+			print("<ul>");
 			foreach ($rss->items as $item)
 			{
 			 	print('<li><a class="rsswidget" title="" href="'. wp_filter_kses($item['link']) .'">'. wp_specialchars($item['title']) .'</a>');
@@ -147,7 +146,6 @@ class social_view_admin extends social_object
 			}
 			print("</ul>");
 		}
-//		print("This is the contents of the box.");
 	}
 	
 	// Render the home page for the admin section
@@ -160,6 +158,8 @@ class social_view_admin extends social_object
 			if( function_exists( 'add_meta_box' )) 
 			{
 				add_meta_box( 'social-bookmarks_about', __( 'About this plugin', $my_domain ), array(&$this,'about_contents'), $my_domain);
+				add_meta_box( 'social-bookmarks_faq', __( 'Frequently Asked Questions (FAQ)', $my_domain ), array(&$this,'faq_contents'), $my_domain);
+
 			}
 		}		
 
@@ -181,6 +181,13 @@ class social_view_admin extends social_object
 		print($html);	
 	}
 
+	function faq_contents()
+	{
+		$html .= file_get_contents($this->location_url.'social_faq.html');
+		
+		print($html);	
+	}
+	
 	// Admin page
 	function plugin_options()
 	{
