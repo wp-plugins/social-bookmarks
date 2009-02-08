@@ -4,7 +4,7 @@ Donate link: http://www.dountsis.com/
 Tags: social, bookmarks, links
 Requires at least: 2.5.1
 Tested up to: 2.7
-Stable tag: 4.1
+Stable tag: 4.1.1
 
 It adds a list of XHTML graphic links at the end of your posts/pages that allow your visitors to easily submit them to bookmarking social sites.
 
@@ -15,6 +15,9 @@ Furthermore, the plugin adds a section in the WordPress Dashboard that lets you 
 
 Also, you can add additional sites by uploading Site Packs to the plugin directory.
 
+== Changelog for 4.1.1 ==
+* Added Tip'd to the social sites.
+* The plugin CSS loads only if the current admin page is the Social Bookmarks one.
 
 == Changelog for 4.1 ==
 
@@ -62,7 +65,9 @@ It is highly recommended to use the automatic installation/updating feature of W
 == Frequently Asked Questions ==
 
 = My favourite site is not included in Social Bookmarks. =
-You can [contact me](http://www.dountsis.com/about#contact "Contact Form") with the name of the site and its URL and I will include it in a future release.
+
+You can [contact me](http://www.dountsis.com/about#contact "Contact Form") with the name of the site and its URL and I will include it in a future release.
+
 
 = What is a Site Pack? =
 
@@ -84,8 +89,11 @@ Sure! Simply grab a copy of the [Template Pack](http://www.dountsis.com/download
 
 The releases of the Site Packs are independent of the plug-in core releases.
 
-=  I think that I have a problem with the plugin. =	You can report your issues to me using the [Bugtracker](http://bugtracker.dountsis.com/ "Bugtracker"). Before you do so, please check whether someone else has reported the same issue. If not then, go ahead and add it making sure that you include as much technical information as possible and an accurate description of your issue.
+=  I think that I have a problem with the plugin. =
+	
+You can report your issues to me using the [Bugtracker](http://bugtracker.dountsis.com/ "Bugtracker"). Before you do so, please check whether someone else has reported the same issue. If not then, go ahead and add it making sure that you include as much technical information as possible and an accurate description of your issue.
 
 = Social Bookmarks is missing a feature that I really want! =
+
 
 Well, in this case, submit your feature request on [Bugtracker](http://bugtracker.dountsis.com/ "Bugtracker") and I will include it in a future release.

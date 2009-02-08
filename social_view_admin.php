@@ -16,7 +16,10 @@ class social_view_admin extends social_object
 	
 	// Social Sites
 	var $social_places;
-		
+	
+	// An array that holds the names of the admin pages
+	var $admin_pages;
+	
 	function social_view_admin(&$current_settings, &$sites)
 	{
  		parent::social_object();
@@ -25,6 +28,11 @@ class social_view_admin extends social_object
 
 		$this->social_places = $sites;
 
+		$this->admin_pages = array('social-bookmarks/social_view_admin.php', 
+									'social_general', 
+									'social_sites',
+									'social_about');
+		
 		$this->attach_view();
 	}
 	
@@ -55,20 +63,23 @@ class social_view_admin extends social_object
 //			add_submenu_page(__FILE__, 'Social Bookmarks - Home', 'Home', 8,  'social_home', array(&$this, 'render_admin_home'));
 		
 			// Add the General options submenu
-			add_submenu_page(__FILE__, 'Social Bookmarks - Options', 'Options', 8,  'social_general', array(&$this, 'options_group_general'));
+			add_submenu_page(__FILE__, 'Social Bookmarks - Options', 'Options', 8,  $this->admin_pages[1], array(&$this, 'options_group_general'));
 
 			// Add the sites submenu
-			add_submenu_page(__FILE__, 'Social Bookmarks - Bookmarks', 'Bookmarks', 8,  'social_sites', array(&$this, 'options_group_sites'));
+			add_submenu_page(__FILE__, 'Social Bookmarks - Bookmarks', 'Bookmarks', 8,  $this->admin_pages[2], array(&$this, 'options_group_sites'));
 
 			// Add the debug submenu
 //			add_submenu_page(__FILE__, 'Social Bookmarks - Info', 'Info', 8,  'social_debug', array(&$this, 'debug_section'));
 
 			// Add the debug submenu
-			add_submenu_page(__FILE__, 'Social Bookmarks - About', 'About', 8,  'social_about', array(&$this, 'render_admin_about'));
+			add_submenu_page(__FILE__, 'Social Bookmarks - About', 'About', 8, $this->admin_pages[3], array(&$this, 'render_admin_about'));
 
-			wp_enqueue_script('jquery-ui-draggable');
-			wp_enqueue_script('postbox');
-			wp_enqueue_script('dashboard');
+			if(in_array($_REQUEST['page'], $this->admin_pages))
+			{
+				wp_enqueue_script('jquery-ui-draggable');
+				wp_enqueue_script('postbox');
+				wp_enqueue_script('dashboard');
+			}
 		}    	
 /*
 		// Add admin page to the Options Tab of the admin section
@@ -81,7 +92,10 @@ class social_view_admin extends social_object
 
 	function include_header()
 	{
-		wp_admin_css('css/dashboard');
+		if(in_array($_REQUEST['page'], $this->admin_pages))
+		{
+			wp_admin_css('css/dashboard');
+		}
 	}
 	
 	// Render the home page for the admin section

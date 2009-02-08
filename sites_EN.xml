@@ -297,6 +297,12 @@
     <key>thisnext_en</key>
   </site>
   <site>
+    <name>Tip'd</name>
+    <url>http://tipd.com/submit.php?url={link}</url>
+    <img>tipd.png</img>
+    <key>tipd_en</key>
+  </site>
+  <site>
     <name>Webride</name>
     <url>http://webride.org/discuss/split.php?uri={link}&amp;title={title}</url>
     <img>webride.png</img>
