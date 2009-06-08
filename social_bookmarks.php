@@ -5,7 +5,7 @@ Plugin URI: http://www.dountsis.com/projects/social-bookmarks/
 Description: Adds a list of XHTML compliant graphic links at the end of your posts that allow your visitors to easily submit them to a number of social bookmarking sites. Use the plugin options under <a href="admin.php?page=social-bookmarks/social_view_admin.php">Dashboard > Social</a> to configure it.
 Author: Apostolos Dountsis
 Author URI: http://www.dountsis.com
-Version: 4.1.1
+Version: 4.1.2
 */
 
 /*  Copyright 2008  APOSTOLOS DOUNTSIS
@@ -47,7 +47,7 @@ if (!class_exists('social_bookmarks'))
 			parent::social_object();
 	
 			// Default Settings
-			$this->default_settings = array('sbb_sites' => 'blinkbits_en|blinklist_en|bloglines_en|blogmarks_en|blogmemes_en|bluedot_en|bumpzee_en|comments_en|connotea_en|delicious_en|delirious_en|diigo_en|digg_en|dotnetkicks_en|dzone_en|facebook_en|fark_en|feed_me_en|fleck_en|friendsite_en|furl_en|google_en|kaboodle_en|linkagogo_en|maple_en|magnolia_en|misterwong_en|netscape_en|netvouz_en|newsvine_en|plugim_en|popcurrent_en|rawsugar_en|reddit_en|rojo_en|simpy_en|skirt_en|slashdot_en|stumbleupon_en|shoutwire_en|squidoo_en|sphereit_en|spurl_en|taggly_en|tailrank_en|technorati_en|thisnext_en|webride_en|wists_en|yahoo_en|tipd_en|buzz_en',
+			$this->default_settings = array('sbb_sites' => 'blinkbits_en|blinklist_en|bloglines_en|blogmarks_en|blogmemes_en|bluedot_en|bumpzee_en|comments_en|connotea_en|delicious_en|delirious_en|diigo_en|digg_en|dotnetkicks_en|dzone_en|facebook_en|fark_en|feed_me_en|fleck_en|friendsite_en|furl_en|google_en|kaboodle_en|linkagogo_en|maple_en|magnolia_en|misterwong_en|netscape_en|netvouz_en|newsvine_en|plugim_en|popcurrent_en|rawsugar_en|reddit_en|rojo_en|simpy_en|skirt_en|slashdot_en|stumbleupon_en|shoutwire_en|squidoo_en|sphereit_en|spurl_en|taggly_en|tailrank_en|technorati_en|thisnext_en|webride_en|wists_en|yahoo_en|tipd_en|buzz_en|twitter_en',
 								'sbb_label' => 'Bookmark It',
 								'sbb_target' => 'new',
 								'sbb_pages_excluded' => 'none',

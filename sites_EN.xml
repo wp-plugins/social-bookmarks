@@ -303,6 +303,12 @@
     <key>tipd_en</key>
   </site>
   <site>
+    <name>Twitter</name>
+    <url>http://twitter.com/home/?status=Check+out+{title}+@+{link}</url>
+    <img>twitter.png</img>
+    <key>twitter_en</key>
+  </site>
+  <site>
     <name>Webride</name>
     <url>http://webride.org/discuss/split.php?uri={link}&amp;title={title}</url>
     <img>webride.png</img>
