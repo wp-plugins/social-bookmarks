@@ -9,12 +9,6 @@
 -->
 <social_sites xsi:noNamespaceSchemaLocation="social_bookmarks.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <site>
-    <name>BlinkBits</name>
-    <url>http://blinkbits.com/bookmarklets/save.php?v=1&amp;source_url={link}&amp;title={title}</url>
-    <img>blinkbits.png</img>
-    <key>blinkbits_en</key>
-  </site>
-  <site>
     <name>BlinkList</name>
     <url>http://blinklist.com/index.php?Action=Blink/addblink.php&amp;Name={title}&amp;Description={title}&amp;Url={link}</url>
     <img>blinklist.png</img>
@@ -33,29 +27,11 @@
     <key>blogmarks_en</key>
   </site>
   <site>
-    <name>Blogmemes</name>
-    <url>http://www.blogmemes.net/post.php?url={link}&amp;title={title}</url>
-    <img>blogmemes.png</img>
-    <key>blogmemes_en</key>
-  </site>
-  <site>
-    <name>BUMPzee</name>
-    <url>http://www.bumpzee.com/bump.php?u={link}</url>
-    <img>bumpzee.png</img>
-    <key>bumpzee_en</key>
-  </site>
-  <site>
     <name>Buzz</name>
     <url>http://buzz.yahoo.com/submit?submitUrl={link}&amp;submitHeadline={title}&amp;submitSummary=</url>
     <img>buzz.png</img>
     <key>buzz_en</key>
   </site>   
-  <site>
-    <name>Co.mments</name>
-    <url>http://co.mments.com/track?url={link}&amp;title={title}</url>
-    <img>comments.png</img>
-    <key>comments_en</key>
-  </site>
   <site>
     <name>Connotea</name>
     <url>http://www.connotea.org/addpopup?continue=confirm&amp;uri={link}&amp;title={title}</url>
@@ -67,12 +43,6 @@
     <url>http://del.icio.us/post?url={link}&amp;title={title}</url>
     <img>delicious.png</img>
     <key>delicious_en</key>
-  </site>
-  <site>
-    <name>De.lirio.us</name>
-    <url>http://de.lirio.us/login/?action=add&amp;address={link}&amp;title={title}</url>
-    <img>delirious.png</img>
-    <key>delirious_en</key>
   </site>
   <site>
     <name>Diigo</name>
@@ -117,14 +87,8 @@
     <key>bluedot_en</key>
   </site>
   <site>
-    <name>Feed Me Links</name>
-    <url>http://feedmelinks.com/categorize?from=toolbar&amp;op=submit&amp;name={title}&amp;url={link}&amp;version=0.7</url>
-    <img>feedmelinks.png</img>
-    <key>feed_me_en</key>
-  </site>
-  <site>
     <name>Fleck</name>
-    <url>http://extension.fleck.com/?v=b.0.804&amp;url={link}</url>
+    <url>http://fleck.com/litebookmarklet.php?url={link}&amp;title={title}</url>
     <img>fleck.png</img>
     <key>fleck_en</key>
   </site>
@@ -133,12 +97,6 @@
     <url>http://FriendSite.com/users/bookmarks/?u={link}&amp;t={title}</url>
     <img>friendsite.png</img>
     <key>friendsite_en</key>
-  </site>
-  <site>
-    <name>FURL</name>
-    <url>http://furl.net/storeIt.jsp?t={title}&amp;u={link}</url>
-    <img>furl.png</img>
-    <key>furl_en</key>
   </site>
   <site>
     <name>Google Bookmarks</name>
@@ -153,22 +111,10 @@
     <key>kaboodle_en</key>
   </site>
   <site>
-    <name>LinkaGoGo</name>
-    <url>http://www.linkagogo.com/go/AddNoPopup?url={link}&amp;title={title}</url>
-    <img>linkagogo.png</img>
-    <key>linkagogo_en</key>
-  </site>
-  <site>
      <name>Maple</name>
-     <url>http://www.maple.nu/submit.php?url={link}</url>
+     <url>http://www.maple.nu/cgi-bin/search6/usa/ss_submit.cgi?fct=100&amp;url={link}&amp;title={title}"</url>
      <img>maple.png</img>
      <key>maple_en</key>
-  </site>
-  <site>
-    <name>Ma.gnolia</name>
-    <url>http://ma.gnolia.com/bookmarklet/add?url={link}&amp;title={title}&amp;description={title}</url>
-    <img>magnolia.png</img>
-    <key>magnolia_en</key>
   </site>
   <site>
     <name>Mister Wong</name>
@@ -201,28 +147,10 @@
     <key>plugim_en</key>
   </site>
   <site>
-    <name>PopCurrent</name>
-    <url>http://popcurrent.com/submit?url={link}&amp;title={title}</url>
-    <img>popcurrent.png</img>
-    <key>popcurrent_en</key>
-  </site>
-  <site>
-    <name>RawSugar</name>
-    <url>http://www.rawsugar.com/tagger/?turl={link}&amp;tttl={title}</url>
-    <img>rawsugar.png</img>
-    <key>rawsugar_en</key>
-  </site>
-  <site>
     <name>reddit</name>
     <url>http://reddit.com/submit?url={link}&amp;title={title}</url>
     <img>reddit.png</img>
     <key>reddit_en</key>
-  </site>
-  <site>
-    <name>Rojo</name>
-    <url>http://www.rojo.com/add-subscription/?resource={link}</url>
-    <img>rojo.png</img>
-    <key>rojo_en</key>
   </site>
   <site>
     <name>Simpy</name>
@@ -262,7 +190,7 @@
   </site>
   <site>
     <name>SphereIt</name>
-    <url>http://www.sphere.com/search?q=sphereit:{link}&amp;title={title}</url>
+    <url>http://www.sphere.com/sphereit/{link}</url>
     <img>sphereit.png</img>
     <key>sphereit_en</key>
   </site>
@@ -271,18 +199,6 @@
     <url>http://www.spurl.net/spurl.php?url={link}&amp;title={title}</url>
     <img>spurl.png</img>
     <key>spurl_en</key>
-  </site>
-  <site>
-    <name>Taggly</name>
-    <url>http://taggly.com/bookmarks.php/pass?action=add&amp;address={link}</url>
-    <img>taggly.png</img>
-    <key>taggly_en</key>
-  </site>
-  <site>
-    <name>Tailrank</name>
-    <url>http://tailrank.com/share/?title={title}&amp;link_href={link}</url>
-    <img>tailrank.png</img>
-    <key>tailrank_en</key>
   </site>
   <site>
     <name>Technorati</name>
