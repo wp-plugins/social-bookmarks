@@ -634,7 +634,7 @@ class social_view_admin extends social_object
 		$db =& new social_db();
 		
 		$html = '<p>Do not display the links on the selected pages below:</p>';
-		$html .='<select id="'.$option_value.'" name="sbb_pages_excluded[]" size="7" multiple="true">';
+		$html .='<select id="'.$option_value.'" name="sbb_pages_excluded[]" size="2" style="height: 100px;" multiple="true">';
 		
 		$site_pages = $db->get_pages();
 		$exclude_selected = $this->current_settings[$option_value];
