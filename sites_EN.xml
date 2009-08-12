@@ -112,7 +112,7 @@
   </site>
   <site>
      <name>Maple</name>
-     <url>http://www.maple.nu/cgi-bin/search6/usa/ss_submit.cgi?fct=100&amp;url={link}&amp;title={title}"</url>
+     <url>http://www.maple.nu/cgi-bin/search6/usa/ss_submit.cgi?fct=100&amp;url={link}&amp;title={title}</url>
      <img>maple.png</img>
      <key>maple_en</key>
   </site>
