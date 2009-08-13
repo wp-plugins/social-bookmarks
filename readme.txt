@@ -3,7 +3,7 @@ Contributors: apostolis
 Donate link: http://www.dountsis.com/
 Tags: social, bookmarks, links
 Requires at least: 2.5.1
-Tested up to: 2.8.3
+Tested up to: 2.8.4
 Stable tag: 4.1.4
 
 It adds a list of XHTML graphic links at the end of your posts/pages that allow your visitors to easily submit them to bookmarking social sites.
