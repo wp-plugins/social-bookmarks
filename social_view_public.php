@@ -283,7 +283,7 @@ $this->current_settings['sbb_round_box_enabled'] = 'N';
 	function get_social_bookmark($site_key, $settings, $output = 1)
 	{
 		// Post Permalink
-		$permalink = get_permalink();			// WP function
+		$permalink = urlencode(get_permalink());			// WP function
 		// Post Title
 		$title = the_title('', '', false);		//WP function
 		$title_enc = urlencode($title);

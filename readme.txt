@@ -4,7 +4,7 @@ Donate link: http://www.dountsis.com/
 Tags: social, bookmarks, links
 Requires at least: 2.5.1
 Tested up to: 2.9.1
-Stable tag: 4.1.5
+Stable tag: 4.1.6
 
 It adds a list of XHTML graphic links at the end of your posts/pages that allow your visitors to easily submit them to bookmarking social sites.
 
@@ -14,6 +14,9 @@ The Social Bookmarks plugin for WordPress adds a list of XHTML compliant graphic
 Furthermore, the plugin adds a section in the WordPress Dashboard that lets you customize it. You can enable/disable social bookmarking sites and exclude specific pages from the plugin.
 
 Also, you can add additional sites by uploading Site Packs to the plugin directory.
+
+== Changelog for 4.1.6 ==
+* LinkedIn is now supported.
 
 == Changelog for 4.1.5 ==
 * The XML file has been updated to rectify the XML compatibility. (Thanks George from modellhelinews.de)
