@@ -123,9 +123,9 @@ The releases of the Site Packs are independent of the plug-in core releases.
 
 =  I think that I have a problem with the plugin. =
 	
-You can report your issues to me using the [Bugtracker](http://bugtracker.dountsis.com/ "Bugtracker"). Before you do so, please check whether someone else has reported the same issue. If not then, go ahead and add it making sure that you include as much technical information as possible and an accurate description of your issue.
+You can report your issues to me using the [issue tracker](http://dountsis.lighthouseapp.com/projects/50461-social-bookmarks/ "issue tracker"). Before you do so, please check whether someone else has reported the same issue. If not then, go ahead and add it making sure that you include as much technical information as possible and an accurate description of your issue.
 
 = Social Bookmarks is missing a feature that I really want! =
 
 
-Well, in this case, submit your feature request on [Bugtracker](http://bugtracker.dountsis.com/ "Bugtracker") and I will include it in a future release.
+Well, in this case, submit your feature request on [issue tracker](http://dountsis.lighthouseapp.com/projects/50461-social-bookmarks/ "issue tracker") and I will include it in a future release.
